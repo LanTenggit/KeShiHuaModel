@@ -1,0 +1,18 @@
+ $.ajax({
+              url: "xxx/xxx.action",
+              data: "id=xxx",
+              cache: false,
+              async: false,
+              success: function (result) {
+                  var data = eval(result);
+                  if (typeof (data) != "undefined" && data.length > 0) {
+                      for (var i = 0; i < data.length; i++) {
+                          data[i]["id"];
+                          data[i]["name"];
+                      }
+                  }
+              },
+              error: function () {
+                  alert("table loading error...");
+              }
+          });
